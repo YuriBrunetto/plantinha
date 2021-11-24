@@ -6,6 +6,8 @@ const GlobalStyle = createGlobalStyle`
     --green: #6EE7B7;
     --blue: #60A5FA;
     --text: #374151;
+    --grey: #D1D5DB;
+    --lightText: #e5e5e5;
   }
 
   * {
@@ -24,6 +26,12 @@ const GlobalStyle = createGlobalStyle`
       rgba(167, 139, 250, 1) 0%,
       rgba(110, 231, 183, 1) 100%
     );
+  }
+
+  a {
+    color: var(--purple);
+    text-decoration: none;
+    font-size: 14px;
   }
 `
 

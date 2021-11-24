@@ -11,5 +11,6 @@ export const FooterStyled = styled.footer`
     text-decoration: none;
     display: inline-block;
     margin-left: 4px;
+    font-size: 12px;
   }
 `
