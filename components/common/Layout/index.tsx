@@ -4,6 +4,7 @@ import { NextRouter, useRouter } from 'next/router'
 import { MainStyled, CommonLimiter } from './styles'
 import Footer from '../Footer'
 import Header from '../Header'
+import Navigation from '../Navigation'
 
 interface Props {
   align?: string
@@ -20,6 +21,7 @@ const Layout: React.FC<Props> = ({ align = 'flex-start', children }) => {
         <CommonLimiter>{children}</CommonLimiter>
       </MainStyled>
       <Footer />
+      {router.asPath !== '/login' && <Navigation />}
     </>
   )
 }
