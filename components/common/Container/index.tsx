@@ -1,7 +1,13 @@
+import { ReactNode } from 'react'
 import { ContainerStyled } from './styles'
 
-const Container: React.FC = ({ children }) => (
-  <ContainerStyled>{children}</ContainerStyled>
+interface Props {
+  marginTop?: boolean
+  children: ReactNode
+}
+
+const Container: React.FC<Props> = ({ marginTop, children }) => (
+  <ContainerStyled marginTop={marginTop}>{children}</ContainerStyled>
 )
 
 export default Container

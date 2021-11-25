@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -33,6 +34,12 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     font-size: 14px;
   }
+`
+
+export const CommonTitle = styled.h1`
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
 `
 
 export default GlobalStyle

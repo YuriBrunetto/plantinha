@@ -1,9 +1,14 @@
 import styled from 'styled-components'
 
-export const ContainerStyled = styled.div`
+interface ContainerProps {
+  marginTop?: boolean
+}
+
+export const ContainerStyled = styled.div<ContainerProps>`
   background-color: #fff;
   padding: 30px 20px;
   border-radius: 10px;
+  margin-top: ${(props) => (props.marginTop ? '20px' : '0')};
 
   h2 {
     font-size: 20px;
