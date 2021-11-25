@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     --text: #374151;
     --grey: #D1D5DB;
     --lightText: #e5e5e5;
+    --darkPurple: #977AEC;
   }
 
   * {
