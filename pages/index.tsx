@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Container from '../components/common/Container'
 
 import Layout from '../components/common/Layout'
+import TasksForToday from '../components/home/TasksForToday'
 import { CommonTitle } from '../styles/global'
 
 const Home: NextPage = () => (
@@ -12,8 +13,12 @@ const Home: NextPage = () => (
     </Head>
     <Layout>
       <CommonTitle>Bom dia, Yuri!</CommonTitle>
-      <Container marginTop>
-        <i>testando</i>
+      <Container
+        title='Tarefas do dia'
+        description='Deslize para direita para completar'
+        marginTop
+      >
+        <TasksForToday />
       </Container>
     </Layout>
   </>

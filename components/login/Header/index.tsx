@@ -1,4 +1,4 @@
-import Logo from '../../../public/svg/Logo.svg'
+import Logo from '../../../assets/svg/Logo.svg'
 import { HeaderStyled } from './styles'
 
 const Header: React.FC = () => (

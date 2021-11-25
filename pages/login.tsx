@@ -22,9 +22,10 @@ const Login: NextPage = () => {
       </Head>
       <Layout align='center'>
         <Header />
-        <Container>
-          <h2>Faça login para continuar</h2>
-          <p>Não tem uma conta? Registre-se agora!</p>
+        <Container
+          title='Faça login para continuar'
+          description='Não tem uma conta? Registre-se agora!'
+        >
           <LoginWrapper>
             <Input
               name='email'
