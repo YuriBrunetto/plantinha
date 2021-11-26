@@ -10,6 +10,7 @@ import Input from '../components/common/Input'
 import Button from '../components/common/Button'
 
 import { LoginWrapper, LoginFooter } from '../styles/login'
+import Footer from '../components/common/Footer'
 
 const Login: NextPage = () => {
   const [email, setEmail] = useState<string>('')
@@ -52,6 +53,7 @@ const Login: NextPage = () => {
           </LoginWrapper>
         </Container>
       </Layout>
+      <Footer />
     </>
   )
 }

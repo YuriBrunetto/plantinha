@@ -16,7 +16,7 @@ export const NavigationWrapper = styled.div`
   background-color: var(--purple);
   height: 64px;
   border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.4);
   display: flex;
   position: relative;
 `

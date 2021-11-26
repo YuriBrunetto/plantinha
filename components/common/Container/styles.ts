@@ -19,4 +19,19 @@ export const ContainerStyled = styled.div<ContainerProps>`
     font-size: 14px;
     margin-top: 8px;
   }
+
+  .date {
+    font-size: 11px;
+    background-color: var(--purple);
+    color: #fff;
+    margin-left: 8px;
+    font-weight: 500;
+    padding: 4px 6px;
+    border-radius: 5px;
+  }
+`
+
+export const TitleWrapper = styled.div`
+  display: flex;
+  align-items: center;
 `

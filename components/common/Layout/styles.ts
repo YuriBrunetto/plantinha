@@ -5,7 +5,8 @@ interface MainProps {
 }
 
 export const MainStyled = styled.main<MainProps>`
-  min-height: calc(100vh - 60px);
+  min-height: ${(props) =>
+    props.align === 'center' ? 'calc(100vh - 60px)' : 'auto'};
   display: flex;
   flex-direction: column;
   align-items: center;

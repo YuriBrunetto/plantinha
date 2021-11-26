@@ -28,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
       rgba(167, 139, 250, 1) 0%,
       rgba(110, 231, 183, 1) 100%
     );
+    min-height: 100vh;
   }
 
   a {

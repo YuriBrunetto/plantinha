@@ -1,11 +1,12 @@
 import { ReactNode } from 'react'
-import { ContainerStyled } from './styles'
+import { ContainerStyled, TitleWrapper } from './styles'
 
 interface Props {
   marginTop?: boolean
   children: ReactNode
   title: string
   description: string
+  date?: string
 }
 
 const Container: React.FC<Props> = ({
@@ -13,9 +14,13 @@ const Container: React.FC<Props> = ({
   children,
   title,
   description,
+  date,
 }) => (
   <ContainerStyled marginTop={marginTop}>
-    <h2>{title}</h2>
+    <TitleWrapper>
+      <h2>{title}</h2>
+      <span className='date'>{date}</span>
+    </TitleWrapper>
     <p>{description}</p>
     {children}
   </ContainerStyled>

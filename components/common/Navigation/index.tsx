@@ -8,10 +8,10 @@ import PlusIcon from '../../../assets/svg/PlusIcon.svg'
 const Navigation: React.FC = () => (
   <NavigationStyled>
     <NavigationWrapper>
-      <NavigationButton title='Início'>
+      <NavigationButton href='/' title='Início'>
         <HomeIcon />
       </NavigationButton>
-      <NavigationButton title='Plantinhas'>
+      <NavigationButton href='/plantinhas' title='Plantinhas'>
         <PlantsIcon />
       </NavigationButton>
       <AddButtonStyled title='Adicionar plantinha'>

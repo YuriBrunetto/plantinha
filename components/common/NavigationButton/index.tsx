@@ -5,10 +5,11 @@ import { NavigationButtonStyled, NavigationTextStyled } from './styles'
 interface Props {
   children: ReactNode
   title: string
+  href: string
 }
 
-const NavigationButton: React.FC<Props> = ({ children, title }) => (
-  <Link href='/' passHref>
+const NavigationButton: React.FC<Props> = ({ children, title, href }) => (
+  <Link href={href} passHref>
     <NavigationButtonStyled title={title}>
       {children}
       <NavigationTextStyled>{title}</NavigationTextStyled>

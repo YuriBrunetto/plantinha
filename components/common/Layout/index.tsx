@@ -2,7 +2,6 @@ import { ReactNode } from 'react'
 import { NextRouter, useRouter } from 'next/router'
 
 import { MainStyled, CommonLimiter } from './styles'
-import Footer from '../Footer'
 import Header from '../Header'
 import Navigation from '../Navigation'
 
@@ -20,7 +19,6 @@ const Layout: React.FC<Props> = ({ align = 'flex-start', children }) => {
       <MainStyled align={align}>
         <CommonLimiter>{children}</CommonLimiter>
       </MainStyled>
-      <Footer />
       {router.asPath !== '/login' && <Navigation />}
     </>
   )
