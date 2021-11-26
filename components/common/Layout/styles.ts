@@ -16,6 +16,6 @@ export const MainStyled = styled.main<MainProps>`
 export const CommonLimiter = styled.div`
   max-width: 960px;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 20px 140px;
   margin: 0 auto;
 `

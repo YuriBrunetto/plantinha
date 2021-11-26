@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from 'react'
+import { ChangeEvent, Dispatch, SetStateAction } from 'react'
 import { FieldStyled, LabelStyled, InputStyled } from './styles'
 
 interface Props {
@@ -6,7 +6,7 @@ interface Props {
   placeholder: string
   value: string
   type: string
-  setValue: Dispatch<SetStateAction<string>>
+  setValue: (e: string | ChangeEvent<any>) => void
   required?: boolean
 }
 
@@ -20,11 +20,12 @@ const Input: React.FC<Props> = ({
 }) => (
   <FieldStyled>
     <InputStyled
+      id={name}
       name={name}
       type={type}
       placeholder={name === 'password' ? '******' : placeholder}
       value={value}
-      onChange={(e) => setValue(e.target.value)}
+      onChange={setValue}
       required={required}
     />
     <LabelStyled htmlFor={name}>{placeholder}</LabelStyled>

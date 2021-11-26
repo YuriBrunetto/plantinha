@@ -1,7 +1,7 @@
-import { useState } from 'react'
 import type { NextPage } from 'next'
 import Link from 'next/link'
 import Head from 'next/head'
+import { useFormik } from 'formik'
 
 import Layout from '../components/common/Layout'
 import Header from '../components/login/Header'
@@ -13,8 +13,15 @@ import { LoginWrapper, LoginFooter } from '../styles/login'
 import Footer from '../components/common/Footer'
 
 const Login: NextPage = () => {
-  const [email, setEmail] = useState<string>('')
-  const [password, setPassword] = useState<string>('')
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    onSubmit: (values) => {
+      console.log(values)
+    },
+  })
 
   return (
     <>
@@ -27,21 +34,21 @@ const Login: NextPage = () => {
           title='Faça login para continuar'
           description='Não tem uma conta? Registre-se agora!'
         >
-          <LoginWrapper>
+          <LoginWrapper onSubmit={formik.handleSubmit}>
             <Input
               name='email'
               placeholder='Seu e-mail'
               type='email'
-              value={email}
-              setValue={setEmail}
+              value={formik.values.email}
+              setValue={formik.handleChange}
               required
             />
             <Input
               name='password'
               placeholder='Sua senha'
               type='password'
-              value={password}
-              setValue={setPassword}
+              value={formik.values.password}
+              setValue={formik.handleChange}
               required
             />
             <LoginFooter>

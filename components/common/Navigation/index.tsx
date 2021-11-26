@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import NavigationButton from '../NavigationButton'
 import { NavigationStyled, NavigationWrapper, AddButtonStyled } from './styles'
 
@@ -14,9 +15,11 @@ const Navigation: React.FC = () => (
       <NavigationButton href='/plantinhas' title='Plantinhas'>
         <PlantsIcon />
       </NavigationButton>
-      <AddButtonStyled title='Adicionar plantinha'>
-        <PlusIcon />
-      </AddButtonStyled>
+      <Link href='/plantinha-detail' passHref>
+        <AddButtonStyled title='Adicionar plantinha'>
+          <PlusIcon />
+        </AddButtonStyled>
+      </Link>
     </NavigationWrapper>
   </NavigationStyled>
 )
