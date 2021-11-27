@@ -4,7 +4,7 @@ import { useFormik } from 'formik'
 
 import Layout from '../components/common/Layout'
 import Container from '../components/common/Container'
-import { CommonTitle } from '../styles/global'
+import { CommonTitle } from '../styles/common'
 import Input from '../components/common/Input'
 import Button from '../components/common/Button'
 import AddPhoto from '../components/plantinhas/AddPhoto'
